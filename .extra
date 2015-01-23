@@ -1,0 +1,16 @@
+# Git credentials
+# Not in the repository, to prevent people from accidentally committing under my name
+GIT_AUTHOR_NAME="Tim Wood"
+GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+git config --global user.name "$GIT_AUTHOR_NAME"
+GIT_AUTHOR_EMAIL="timwood@gwu.edu"
+GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+git config --global user.email "$GIT_AUTHOR_EMAIL"
+
+
+# from old bash_profile
+alias f='open -a Finder ./'                 # f: Opens current directory in MacOS Finder
+alias cp='cp -iv'                           # Preferred 'cp' implementation
+alias mv='mv -iv'                           # Preferred 'mv' implementation
+#alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
+#alias less='less -FSRXc'                    # Preferred 'less' implementation
