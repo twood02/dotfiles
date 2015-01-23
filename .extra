@@ -14,3 +14,5 @@ alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
 #alias less='less -FSRXc'                    # Preferred 'less' implementation
+
+alias subl='open -a "Sublime Text 2"'
