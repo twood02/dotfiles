@@ -16,3 +16,5 @@ alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
 #alias less='less -FSRXc'                    # Preferred 'less' implementation
 
 alias subl='open -a "Sublime Text 2"'
+
+alias gs='git status -sb'   # note this will override ghostscript

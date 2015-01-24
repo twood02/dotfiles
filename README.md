@@ -1,3 +1,16 @@
+# Tim's dotfiles (based on Mathias's)
+
+I've modified this for my environment.
+
+Some useful commands:
+````
+  cdf      change directory to the location of the top most finder window
+  f        open a finder window in the current terminal path
+  gs       git status -sb
+````
+
+-----
+
 # Mathias’s dotfiles
 
 ![Screenshot of my shell prompt](http://i.imgur.com/EkEtphC.png)
