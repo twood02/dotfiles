@@ -17,7 +17,7 @@
 #   'ctrl-p': 'core:move-down'
 #
 
-'.atom-workspace':
+'atom-workspace':
   'ctrl-left': 'editor:move-to-beginning-of-word'
   'ctrl-right': 'editor:move-to-end-of-word'
   'ctrl-shift-left': 'editor:select-to-beginning-of-word'
