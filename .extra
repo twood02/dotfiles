@@ -22,7 +22,6 @@ then
         export RTE_SDK=/home/timwood/openNetVM/dpdk-1.8.0
         export RTE_TARGET=x86_64-native-linuxapp-gcc
         export RTE_ARCH=x86_64
-fi
 elif [[ $OSTYPE == darwin* ]]
 then
         alias f='open -a Finder ./'     # f: Opens current directory in MacOS Finder
