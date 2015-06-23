@@ -6,7 +6,9 @@ git config --global user.name "$GIT_AUTHOR_NAME"
 GIT_AUTHOR_EMAIL="timwood@gwu.edu"
 GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
-
+if [[ $OSTYPE == darwin* ]]; then
+        git config --global credential.helper osxkeychain
+fi
 
 # from old bash_profile
 alias cp='cp -iv'                           # Preferred 'cp' implementation
