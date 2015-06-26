@@ -10,5 +10,11 @@
     showOnStartup: false
   metrics:
     userId: "2b8d964846053db77b68f8495fd5ad006a0a481b"
-  core: {}
+  core:
+    disabledPackages: [
+      "symbols-view"
+    ]
   "tree-view": {}
+  minimap:
+    plugins:
+      "minimap-autohide": true
