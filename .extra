@@ -10,6 +10,8 @@ if [[ $OSTYPE == darwin* ]]; then
         git config --global credential.helper osxkeychain
 fi
 
+# get rid of sh
+alias sh='bash'
 # from old bash_profile
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
@@ -21,9 +23,10 @@ alias gs='git status -sb'   # note this will override ghostscript
 if [[ $OSTYPE == linux* ]]
 then
         # DPDK settings
-        export RTE_SDK=/home/timwood/openNetVM/dpdk-1.8.0
+        export RTE_SDK=/home/timwood/dpdk
         export RTE_TARGET=x86_64-native-linuxapp-gcc
         export RTE_ARCH=x86_64
+        export ONVM=/home/timwood/openNetVM/onvm
 elif [[ $OSTYPE == darwin* ]]
 then
         alias f='open -a Finder ./'     # f: Opens current directory in MacOS Finder
