@@ -23,12 +23,19 @@ alias gs='git status -sb'   # note this will override ghostscript
 if [[ $OSTYPE == linux* ]]
 then
         # DPDK settings
-        export RTE_SDK=/home/timwood/dpdk
-        export RTE_TARGET=x86_64-native-linuxapp-gcc
-        export RTE_ARCH=x86_64
-        export ONVM=/home/timwood/openNetVM/onvm
+        if [[ `uname -m` == aarch64 ]]; then 
+                # For cloudlab ARM servers
+                export RTE_TARGET=arm64-xgene1-linuxapp-gcc
+                export RTE_ARCH=arm64
+        else
+                export RTE_TARGET=x86_64-native-linuxapp-gcc
+                export RTE_ARCH=x86_64
+        fi
+        export ONVM=~/openNetVM/onvm
+        export RTE_SDK=~/dpdk
 elif [[ $OSTYPE == darwin* ]]
 then
         alias f='open -a Finder ./'     # f: Opens current directory in MacOS Finder
         alias subl='open -a "Sublime Text 2"'
 fi
+
