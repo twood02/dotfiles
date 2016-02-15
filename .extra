@@ -31,8 +31,13 @@ then
                 export RTE_TARGET=x86_64-native-linuxapp-gcc
                 export RTE_ARCH=x86_64
         fi
-        export ONVM=~/openNetVM/onvm
-        export RTE_SDK=~/dpdk
+        if [[ `hostname | grep -c cloudlab` == 1 ]]; then
+                export ONVM=/local/onvm/openNetVM/onvm
+                export RTE_SDK=/local/onvm/openNetVM/dpdk
+        else
+                export ONVM=~/openNetVM/onvm
+                export RTE_SDK=~/dpdk
+        fi
 elif [[ $OSTYPE == darwin* ]]
 then
         alias f='open -a Finder ./'     # f: Opens current directory in MacOS Finder
