@@ -1,18 +1,13 @@
 # Git credentials
-# Not in the repository, to prevent people from accidentally committing under my name
 GIT_AUTHOR_NAME="Tim Wood"
 GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
 git config --global user.name "$GIT_AUTHOR_NAME"
 GIT_AUTHOR_EMAIL="timwood@gwu.edu"
 GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
-if [[ $OSTYPE == darwin* ]]; then
-        git config --global credential.helper osxkeychain
-fi
 
 # get rid of sh
 alias sh='bash'
-# from old bash_profile
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
@@ -20,9 +15,7 @@ alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
 
 alias gs='git status -sb'   # note this will override ghostscript
 
-if [[ $OSTYPE == linux* ]]
-then
-        # DPDK settings
+# DPDK settings
         if [[ `uname -m` == aarch64 ]]; then 
                 # For cloudlab ARM servers
                 export RTE_TARGET=arm64-xgene1-linuxapp-gcc
@@ -31,16 +24,8 @@ then
                 export RTE_TARGET=x86_64-native-linuxapp-gcc
                 export RTE_ARCH=x86_64
         fi
-        if [[ `hostname | grep -c cloudlab` == 1 ]]; then
-                export ONVM=/local/onvm/openNetVM/onvm
-                export RTE_SDK=/local/onvm/openNetVM/dpdk
-        else
-                export ONVM=~/openNetVM/onvm
-                export RTE_SDK=~/dpdk
-        fi
-elif [[ $OSTYPE == darwin* ]]
-then
-        alias f='open -a Finder ./'     # f: Opens current directory in MacOS Finder
-        alias subl='open -a "Sublime Text 2"'
-fi
+         export ONVM=/local/onvm/openNetVM/onvm
+         export RTE_SDK=/local/onvm/openNetVM/dpdk
+         export ONVM_HOME=/local/onvm/openNetVM
+#         export ONVM_NIC_PCI=" 06:00.0  06:00.1 " # use this to autobind NIC to DPDK
 
