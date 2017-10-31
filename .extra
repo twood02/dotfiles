@@ -41,6 +41,6 @@ then
 elif [[ $OSTYPE == darwin* ]]
 then
         alias f='open -a Finder ./'     # f: Opens current directory in MacOS Finder
-        alias subl='open -a "Sublime Text 2"'
+        alias subl='open -a "Sublime Text"'
 fi
 

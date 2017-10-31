@@ -33,6 +33,8 @@ brew install bash-completion
 
 brew install ctags
 
+brew install ruby
+
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
