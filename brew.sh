@@ -24,7 +24,7 @@ brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
+brew install gnu-sed 
 # Install Bash 4.
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
 # running `chsh`.
@@ -36,7 +36,9 @@ brew install ctags
 brew install ruby
 
 # Install `wget` with IRI support.
-brew install wget --with-iri
+brew install wget
+brew install telnet
+brew install gnuplot
 
 # Install RingoJS and Narwhal.
 # Note that the order in which these are installed is important;
@@ -45,7 +47,7 @@ brew install wget --with-iri
 # brew install narwhal
 
 # Install more recent versions of some OS X tools.
-brew install vim --override-system-vi
+# brew install vim 
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen

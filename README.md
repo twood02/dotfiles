@@ -7,7 +7,7 @@ Some useful commands:
   cdf      change directory to the location of the top most finder window
   f        open a finder window in the current terminal path
   a        opens Atom in current path
-  s        opens Sublime in current path
+  subl        opens Sublime in current path
   gs       git status -sb
 ````
 
